@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2d5016 0%, #5a8f3a 50%, #87a96b 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2d5016;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #5a8f3a;
+  font-weight: 500;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+.subject-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fdf5 100%);
+  border-radius: 15px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5a8f3a, #87a96b);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover::before {
+  transform: scaleX(1);
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(90, 143, 58, 0.3);
+  border-color: #5a8f3a;
+}
+
+.subject-card:focus {
+  outline: 3px solid #5a8f3a;
+  outline-offset: 2px;
+}
+
+.subject-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.subject-name {
+  font-size: 1.5rem;
+  color: #2d5016;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.subject-description {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-count {
+  /* display: inline-block; */
+  display: none;
+  background: linear-gradient(135deg, #5a8f3a, #87a96b);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Mobile responsive - single column on small screens */
+@media (max-width: 640px) {
+  .subjects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  header h1 {
+    /* font-size: 2rem; */
+    font-size: 1.5rem;
+  }
+
+  .subject-card {
+    padding: 25px;
+  }
+
+  .subject-icon {
+    font-size: 2.5rem;
+  }
+
+  .subject-name {
+    /* font-size: 1.3rem; */
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet - maintain 2 columns */
+@media (min-width: 641px) and (max-width: 900px) {
+  .subjects-grid {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Not Available - AgroStudy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #2d5016 0%, #5a8f3a 50%, #87a96b 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 500px;
+        width: 100%;
+        background: white;
+        border-radius: 20px;
+        padding: 50px 40px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .icon {
+        font-size: 5rem;
+        margin-bottom: 20px;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #2d5016;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .message {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .coming-soon {
+        background: linear-gradient(135deg, #5a8f3a, #87a96b);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 25px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 25px;
+      }
+
+      .btn-back {
+        display: inline-block;
+        background: white;
+        color: #5a8f3a;
+        padding: 12px 30px;
+        border: 2px solid #5a8f3a;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn-back:hover {
+        background: #5a8f3a;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(90, 143, 58, 0.3);
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 40px 30px;
+        }
+
+        .icon {
+          font-size: 4rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .message {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">🚧</div>
+      <h1>Content Not Yet Available</h1>
+      <p class="message">The flashcards for this agricultural subject are currently under development. Check back soon for comprehensive study materials!</p>
+      <div class="coming-soon">🌱 Coming Soon</div>
+      <br />
+      <a href="../index.html" class="btn-back">← Back to Subjects</a>
+    </div>
+  </body>
+</html>
