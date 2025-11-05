@@ -1,5 +1,5 @@
 const CACHE_NAME = "app-cache-v2";
-const ASSETS_TO_CACHE = ["./index.html", "./agn514/agn514.html", "./crp511/crp511.html", "./not yet available page/not-available.html", "./offline/offline.html", "./agn514/script.js", "./agn514/style.css", "./crp511/script.js", "./crp511/style.css"];
+const ASSETS_TO_CACHE = ["/index.html", "/agn514/agn514.html", "/crp511/crp511.html", "/not yet available page/not-available.html", "/offline/offline.html", "/agn514/script.js", "/agn514/style.css", "/crp511/script.js", "/crp511/style.css"];
 
 // Install service worker and cache essential assets
 self.addEventListener("install", (event) => {
